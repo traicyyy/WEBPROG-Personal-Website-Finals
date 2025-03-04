@@ -12,8 +12,8 @@
     </header>
   
     <main>
-      <section id="home">
-        <h1>Kon'nichiwa, my name is Tracie!</h1>
+      <section id="home" class="home">
+        <h1 class="home-title"></h1>
         <p>I am from BSIT-MI231, currently pursuing a Bachelor of Science in Information Technology at Asia Pacific College, Makati City, Philippines.</p>
       </section>
   
@@ -143,6 +143,7 @@
     padding: 10px;
     text-align: left;
     background-color: rgba(0, 0, 0, 0.8);
+    text-align: left;
   }
   
   .navbar {
@@ -150,6 +151,7 @@
     justify-content: center;
     gap: 15px;
     padding: 0;
+    text-align: left;
   }
   
   .navbar li {
@@ -208,8 +210,27 @@
   }
 
 /* HOME */
-   #home {
-    background-image: url('/public/home-bg.png');
+#home {
+   color: white;
+}
+    
+.home {  
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url('/public/home-bg.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.home-title h1 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 68px;
+    max-width: 1000px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    margin-top: auto;
+    text-align: left;
 }
 
 
