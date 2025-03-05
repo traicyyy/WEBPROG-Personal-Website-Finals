@@ -2,15 +2,16 @@
   <section id="gallery" class="hero hero-services">
         <div class="overlay"></div>
         <div class="content">
-            <h1 class="hero-title">OUR WORKS</h1>
+            <h1 class="hero-title">GALLERY</h1>
             <section class="slider-container">
                 <button class="prev">&lt;</button>
                 <div class="slider">
-                    <div class="slide"><img src="images/g_dc.png" alt="Image 1"></div>
-                    <div class="slide"><img src="images/g_sr.png" alt="Image 2"></div>
-                    <div class="slide"><img src="images/g_ss.png" alt="Image 3"></div>
-                    <div class="slide"><img src="images/g_su.png" alt="Image 4"></div>
-                    <div class="slide"><img src="images/g_sv.png" alt="Image 5"></div>
+                    <div class="slide"><img src="/pic1.png" alt="Image 1"></div>
+                    <div class="slide"><img src="/pic2.png" alt="Image 2"></div>
+                    <div class="slide"><img src="/pic3.png" alt="Image 3"></div>
+                    <div class="slide"><img src="/pic4.png" alt="Image 4"></div>
+                    <div class="slide"><img src="/pic5.png" alt="Image 5"></div>
+                    <div class="slide"><img src="/pic6.png" alt="Image 6"></div>
                 </div>
                 <button class="next">&gt;</button>
                 <div class="dots-container"></div>
