@@ -174,7 +174,7 @@
 
 
     <!-- EDUCATION Section -->
-    <section id="education" style="background-image: url('/experience.png');">
+    <section id="education" style="background-image: url('/education.png');">
         <h4 class="education-title">EDUCATION</h4>
         <div class="education-container2">
             <div class="education-box2">
@@ -184,56 +184,36 @@
                     <h4><a href="https://www.apc.edu.ph/">Asia Pacific College</a></h4>
                     <p>August 2023 - Present</p>
                     <br>
-                    <br>
-                    <h3 style="text-align: left !important;">Bachelor of Secondary Education major in General Science</h3>
+                    <h3 style="text-align: center !important;">Bachelor of Secondary Education major in General Science</h3>
                     <h4><a href="https://southernleytestateu.edu.ph/index.php/en/">Southern Leyte State University</a></h4>
                     <p>August 2019 - 2021</p>
                 </div>
             </div>
             <div class="education-box2">
                 <div class="education-text2">
-                    <h2>COLLEGE</h2>
-                    <h3 style="text-align: left !important;">Bachelor of Science in Information Technology with specialization in Mobile and Internet Technology</h3>
-                    <h4><a href="https://www.apc.edu.ph/">Asia Pacific College</a></h4>
-                    <p>August 2023 - Present</p>
+                    <h2>SENIOR HIGH SCHOOL</h2>
+                    <h3 style="text-align: center !important;">Accountancy, Business, and Management</h3>
+                    <h4><a href="https://www.facebook.com/officiallystac/">Saint Thomas Aquinas College</a></h4>
+                    <p>June 2017 - March 2019</p>
                 </div>
             </div>
             <div class="education-box2">
                 <div class="education-text2">
-                    <h3>Sole Mission</h3>
-                    <p style="text-align: left !important;">Developed a website for a local shoe restoration business with both frontend and backend</p>
+                    <h2>JUNIOR HIGH SCHOOL</h2>
+                    <h4><a href="https://www.facebook.com/profile.php?id=100063784971452">Libas National High School</a></h4>
+                    <p>Grade 9 & 10</p>
+                    <p>2015 - 2017</p>
+                    <br>
+                    <h4><a href="https://www.facebook.com/DepedTayoCCTMNHS301314/">Cesar C. Tan Memorial National High School</a></h4>
+                    <p>Grade 7 & 8</p>
+                    <p>2013 - 2015</p>
                 </div>
             </div>
-            <div class="education-box2">
-                <div class="education-text2">
-                    <h3>Coding</h3>
-                    <p style="text-align: left !important;">Gained hands-on experience coding in Python and Java during the first year</p>
-                </div>
-            </div>
-            <div class="education-box2">
-                <div class="education-text2">
-                    <h3>Tech Support (Basic TS)</h3>
-                    <p style="text-align: left !important;">Assisted customers with basic troubleshooting on their devices as a customer service representative</p>
-                </div>
-            </div>
+            
+            
         </div>
     </section>
     
-
-
-
-    
-
-
-
-
-      <!-- EDUCATION -->
-      <section id="education" style="background-image: url('/path/to/education.jpg');">
-        <div class="content">
-          <h1>Education</h1>
-          <p>I have completed my studies in Computer Science, specializing in web development and design.</p>
-        </div>
-      </section>
 
       <section id="gallery" style="background-image: url('/path/to/gallery.jpg');">
         <div class="content">
