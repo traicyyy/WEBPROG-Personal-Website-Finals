@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
 
       <!-- ABOUT Section -->
@@ -167,6 +167,53 @@
             <div class="goals-box2">
                 <div class="goals-text2">
                     <p>I also dream of traveling the world with my family and loved ones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EDUCATION Section -->
+    <section id="education" style="background-image: url('/experience.png');">
+        <h4 class="education-title">EDUCATION</h4>
+        <div class="education-container2">
+            <div class="education-box2">
+                <div class="education-text2">
+                    <h2>COLLEGE</h2>
+                    <h3 style="text-align: left !important;">Bachelor of Science in Information Technology with specialization in Mobile and Internet Technology</h3>
+                    <h4><a href="https://www.apc.edu.ph/">Asia Pacific College</a></h4>
+                    <p>August 2023 - Present</p>
+                    <br>
+                    <br>
+                    <h3 style="text-align: left !important;">Bachelor of Secondary Education major in General Science</h3>
+                    <h4><a href="https://southernleytestateu.edu.ph/index.php/en/">Southern Leyte State University</a></h4>
+                    <p>August 2019 - 2021</p>
+                </div>
+            </div>
+            <div class="education-box2">
+                <div class="education-text2">
+                    <h2>COLLEGE</h2>
+                    <h3 style="text-align: left !important;">Bachelor of Science in Information Technology with specialization in Mobile and Internet Technology</h3>
+                    <h4><a href="https://www.apc.edu.ph/">Asia Pacific College</a></h4>
+                    <p>August 2023 - Present</p>
+                </div>
+            </div>
+            <div class="education-box2">
+                <div class="education-text2">
+                    <h3>Sole Mission</h3>
+                    <p style="text-align: left !important;">Developed a website for a local shoe restoration business with both frontend and backend</p>
+                </div>
+            </div>
+            <div class="education-box2">
+                <div class="education-text2">
+                    <h3>Coding</h3>
+                    <p style="text-align: left !important;">Gained hands-on experience coding in Python and Java during the first year</p>
+                </div>
+            </div>
+            <div class="education-box2">
+                <div class="education-text2">
+                    <h3>Tech Support (Basic TS)</h3>
+                    <p style="text-align: left !important;">Assisted customers with basic troubleshooting on their devices as a customer service representative</p>
                 </div>
             </div>
         </div>
