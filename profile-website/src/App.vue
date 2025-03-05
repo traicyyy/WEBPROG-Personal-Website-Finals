@@ -1,6 +1,6 @@
 <template>
-  <personal-profile/> <br>
-  <photo-gallery/> <br>
+  <personal-profile/>
+  <photo-gallery/>
   <guest-book/>
   <app-footer/>
 </template>

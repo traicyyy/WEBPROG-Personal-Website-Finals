@@ -1,5 +1,5 @@
 <template>
-  <section id="gallery" class="hero hero-services">
+  <section id="gallery" class="hero hero-services" style="background-image: url('/gallery.png');">
         <div class="overlay"></div>
         <div class="content">
             <h1 class="hero-title">GALLERY</h1>
@@ -21,76 +21,128 @@
 </template>
 
 
-<script>
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".slide");
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
-const dotsContainer = document.querySelector(".dots-container");
-let slideIndex = 0;
-let autoScroll;
 
-if (slider && slides.length > 0 && prevButton && nextButton && dotsContainer) {
-    slides.forEach((_, index) => {
+<script>
+import { onMounted, ref } from "vue";
+
+export default {
+  setup() {
+    let slideIndex = ref(0);
+    let autoScroll;
+    let slider, slides, prevButton, nextButton, dotsContainer, dots;
+
+    function updateSlider() {
+      if (!slides || slides.length === 0 || !dots) return; // 
+      slider.style.transform = `translateX(${-slideIndex.value * 100}%)`;
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[slideIndex.value].classList.add("active");
+    }
+
+    function moveSlide(step) {
+      if (!slides || slides.length === 0) return; 
+      slideIndex.value = (slideIndex.value + step + slides.length) % slides.length;
+      updateSlider();
+      resetAutoScroll();
+    }
+
+    function jumpToSlide(index) {
+      if (!slides || slides.length === 0) return; 
+      slideIndex.value = index;
+      updateSlider();
+      resetAutoScroll();
+    }
+
+    function autoSlide() {
+      moveSlide(1);
+    }
+
+    function resetAutoScroll() {
+      if (!slides || slides.length === 0) return; 
+      clearInterval(autoScroll);
+      autoScroll = setInterval(autoSlide, 3000);
+    }
+
+
+    onMounted(() => {
+      slider = document.querySelector(".slider");
+      slides = document.querySelectorAll(".slide");
+      prevButton = document.querySelector(".prev");
+      nextButton = document.querySelector(".next");
+      dotsContainer = document.querySelector(".dots-container");
+
+      if (!slider || slides.length === 0 || !prevButton || !nextButton || !dotsContainer) {
+        console.error("Slider elements not found!");
+        return; // Prevent further execution
+      }
+
+      slides.forEach((_, index) => {
         const dot = document.createElement("span");
         dot.classList.add("dot");
         dot.addEventListener("click", () => jumpToSlide(index));
         dotsContainer.appendChild(dot);
       });
-    const dots = document.querySelectorAll(".dot");
 
-    function updateSlider() {
-        slider.style.transform = `translateX(${-slideIndex * 100}%)`;
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[slideIndex].classList.add("active");
-    }
+      dots = document.querySelectorAll(".dot");
 
-    function moveSlide(step) {
-        slideIndex = (slideIndex + step + slides.length) % slides.length;
-        updateSlider();
-        resetAutoScroll();
-    }
+      prevButton.addEventListener("click", () => moveSlide(-1));
+      nextButton.addEventListener("click", () => moveSlide(1));
 
-    function jumpToSlide(index) {
-        slideIndex = index;
-        updateSlider();
-        resetAutoScroll();
-    }
-
-    function autoSlide() {
-        moveSlide(1);
-    }
-
-    function resetAutoScroll() {
-        clearInterval(autoScroll);
-        autoScroll = setInterval(autoSlide, 3000);
-    }
-
-    prevButton.addEventListener("click", () => moveSlide(-1));
-    nextButton.addEventListener("click", () => moveSlide(1));
-
-    const sliderContainer = document.querySelector(".slider-container");
-    if (sliderContainer) {
+      const sliderContainer = document.querySelector(".slider-container");
+      if (sliderContainer) {
         sliderContainer.addEventListener("mouseenter", () => clearInterval(autoScroll));
         sliderContainer.addEventListener("mouseleave", resetAutoScroll);
-    }
+      }
 
-    // Initialize slider
-    updateSlider();
-    autoScroll = setInterval(autoSlide, 3000);
+      // ✅ Only start if slides exist
+      if (slides.length > 0) {
+        updateSlider();
+        resetAutoScroll();
+      }
+    });
+
+    return { slideIndex };
   }
+};
 </script>
 
 
 <style scoped>
 #gallery {
     text-align: center;
-    padding: 70px;
+    padding: 12px;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 9%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 90px;
+    margin-bottom: 8px;
 }
 
 .hero {
     position: relative;
-    height: 100vh;
+    height: 80vh; 
+    max-height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,20 +150,34 @@ if (slider && slides.length > 0 && prevButton && nextButton && dotsContainer) {
     color: white;  
 }
 
+.hero-services, .hero-gallery {
+    position: relative;
+    height: 85vh;
+    max-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+}
+
 .slider-container {
     position: relative;
-    width: 100%;
+    width: 85%;
     max-width: 800px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 5vh;
 }
 
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 50%;
+    width: 100%;
 }
 
 .slide {
@@ -121,7 +187,7 @@ if (slider && slides.length > 0 && prevButton && nextButton && dotsContainer) {
 
 .slide img {
     width: 100%;
-    height: auto;
+    height: 62vh;
 }
 
 /* Navigation Buttons */
@@ -132,25 +198,48 @@ if (slider && slides.length > 0 && prevButton && nextButton && dotsContainer) {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 1rem;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 1.5rem;
     border-radius: 50%;
     z-index: 10;
 }
 
 /* Left Button Fix */
 .prev {
-    left: 5px;
+    left: 1rem;
 }
 
 /* Right Button */
 .next {
-    right: 5px;
+    right: 1rem;
 }
 
 /* Hover Effect */
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .prev, .next {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .prev, .next {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
 }
 </style>

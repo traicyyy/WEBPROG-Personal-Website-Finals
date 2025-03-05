@@ -51,7 +51,7 @@
 
     <!-- EXPERIENCE Section -->
     <section id="services" style="background-image: url('/experience.png');">
-        <h4 class="services-title">IT Experience</h4>
+        <h4 class="services-title">IT EXPERIENCE</h4>
         <div class="services-container2">
             <div class="service-box2">
                 <img src="/it1.png" alt="Exp 1">
@@ -94,7 +94,7 @@
 
     <!-- HOBBIES AND INTERESTS -->
     <section id="hobbies" style="background-image: url('/hobbies.png');">
-        <h4 class="hobbies-title">Hobbies & Interests</h4>
+        <h4 class="hobbies-title">HOBBIES & INTERESTS</h4>
         <div class="hobbies-container2">
             <div class="hobbies-box2">
                 <div class="hobbies-text2">
@@ -132,7 +132,7 @@
     
     <!-- GOALS Section -->
     <section id="goals" style="background-image: url('/goals.png');">
-        <h4 class="goals-title">Goals & Dreams</h4>
+        <h4 class="goals-title">GOALS & DREAMS</h4>
         <div class="goals-container2">
             <div class="goals-box2">
                 <div class="goals-text2">
@@ -214,31 +214,9 @@
         </div>
     </section>
     
-
-      <section id="gallery" style="background-image: url('/path/to/gallery.jpg');">
-        <div class="content">
-          <h1>Gallery</h1>
-          <p>Check out some of my favorite moments captured in these photos.</p>
-        </div>
-      </section>
-
-      <section id="contact" style="background-image: url('/path/to/contact.jpg');">
-        <div class="content">
-          <h1>Contact Me</h1>
-          <p>Feel free to reach out to me for any inquiries or collaborations.</p>
-        </div>
-      </section>
     </main>
   </div>
 </template>
-
-
-
-
-
-
-
-
 
 
 
@@ -260,4 +238,5 @@ export default {
   }
 };
 </script>
+
 
