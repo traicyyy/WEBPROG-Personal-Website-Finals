@@ -1,275 +1,236 @@
 <template>
+  <div>
     <header>
       <nav>
-        <ul class="navbar">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#gallery">Photo Gallery</a></li>
-          <li><a href="#contact">Contact Me</a></li>
+        <div class="menu-toggle" @click="toggleMenu">☰</div>
+        <ul :class="{ 'open': menuOpen }">
+          <li><a href="#home" @click="closeMenu">Home</a></li>
+          <li><a href="#about" @click="closeMenu">About Me</a></li>
+          <li><a href="#education" @click="closeMenu">Education</a></li>
+          <li><a href="#gallery" @click="closeMenu">Gallery</a></li>
+          <li><a href="#contact" @click="closeMenu">Contact Me</a></li>
         </ul>
       </nav>
     </header>
-  
+
+
     <main>
-      <section id="home" class="home">
-        <h1 class="home-title"></h1>
-        <p>I am from BSIT-MI231, currently pursuing a Bachelor of Science in Information Technology at Asia Pacific College, Makati City, Philippines.</p>
-      </section>
-  
-      <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I am Tracie Cañas Tomon. Currently in my second year of pursuing a Bachelor of Science in Information Technology, with a specialization in Mobile and Internet Technology. People call me Trace, Tres or Trai. Some of my relatives call me Budang, like the Buddha, because I looked like the Buddha when I was born. Any shade of blue is my fave color. I like keeping things neat and tidy. Depending on my mood, I can be a bit of an introvert or an extrovert. I am committed to becoming a skilled IT professional, driven by my passion for technology and continuous learning.</p>
-      </section>
-  
-      <section id="education" class="section">
-        <h2>Education & Achievements</h2>
-        <h3>College</h3>
-        <h4>Asia Pacific College</h4>
-        <p>Bachelor of Science in Information Technology with specialization in Mobile and Internet Technology<br>August 2023 - Present<br>Dean's Lister AY 2023-2024<br>Class Representative (SoCIT Leads) 2023 - Present<br>Member of Microsoft Community (MSC) 2023 - Present</p>
+      <!-- HOME Section-->
+      <section id="home" class="home-section" style="background-image: url('/home.png');">
+        <div class="home-container">
+            <div class="home-content">
+                <div class="home-text">
+                    <h2 id="line1">WELCOME TO MY</h2>
+                    <h2 id="line2">COMFORT ZONE!</h2>
+                    <span class="home-tag">GET STARTED</span>
+                </div>
+                <div class="home-image">
+                    <img src="/jinwoo.gif" alt="About Me">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h4>Southern Leyte State University</h4>
-        <p>Bachelor of Secondary Education major in General Science<br>August 2019 - 2021</p>
-  
-        <h3>Senior High School</h3>
-        <h4>Saint Thomas Aquinas College</h4>
-        <p>Academic Track: Accountancy, Business, and Management<br>June 2017 - March 2019<br>Associate Editor-in-Chief of The TORCH (School Publication)<br>ABM Achiever<br>Graduated with High Honors</p>
-  
-        <h3>Junior High School</h3>
-        <h4>Libas National High School</h4>
-        <p>Grade 9 - 10<br>SY 2015 - 2017<br>SSC President (2016-2017)<br>Completed Junior High as Class Valedictorian</p>
 
-        <h4>Cesar C. Tan Memorial National High School</h4>
-        <p>Grade 7 - 8<br>SY 2013 - 2015<br>Consistent honor student</p>
+      <!-- ABOUT Section -->
+    <section id="about" class="about-section" style="background-image: url('/about.png');">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="about-tag">About Me</span>
+                    <h2>Get to Know More About Me</h2>
+                    <p>I am Tracie Tomon. Currently in my second year of pursuing a Bachelor of Science in Information Technology, with a specialization in Mobile and Internet Technology. People call me Trace, Tres or Trai. Some of my relatives call me Budang, like the Buddha, because I looked like the Buddha when I was born. Any shade of blue is my fave color. I like keeping things neat and tidy. Depending on my mood, I can be a bit of an introvert or an extrovert. I am committed to becoming a skilled IT professional, driven by my passion for technology and continuous learning.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/profile.jpg" alt="About Me">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EXPERIENCE Section -->
+    <section id="services" style="background-image: url('/experience.png');">
+        <h4 class="services-title">IT Experience</h4>
+        <div class="services-container2">
+            <div class="service-box2">
+                <img src="/it1.png" alt="Exp 1">
+                <div class="service-text2">
+                    <h3>RamQuest (Android Studio)</h3>
+                    <p style="text-align: left !important;">Designed the user interface for a mobile application project using Android Studio</p>
+                </div>
+            </div>
+            <div class="service-box2">
+                <img src="/it2.png" alt="Exp 2">
+                <div class="service-text2">
+                    <h3>RamQuest (Figma)</h3>
+                    <p style="text-align: left !important;">Created captivating interfaces and delightful user experiences for websites and mobile apps in a UI/UX Design and Programming course</p>
+                </div>
+            </div>
+            <div class="service-box2">
+                <img src="/it3.png" alt="Exp 3">
+                <div class="service-text2">
+                    <h3>Sole Mission</h3>
+                    <p style="text-align: left !important;">Developed a website for a local shoe restoration business with both frontend and backend</p>
+                </div>
+            </div>
+            <div class="service-box2">
+                <img src="/it4.png" alt="Exp 4">
+                <div class="service-text2">
+                    <h3>Coding</h3>
+                    <p style="text-align: left !important;">Gained hands-on experience coding in Python and Java during the first year</p>
+                </div>
+            </div>
+            <div class="service-box2">
+                <img src="/it5.png" alt="Exp 5">
+                <div class="service-text2">
+                    <h3>Tech Support (Basic TS)</h3>
+                    <p style="text-align: left !important;">Assisted customers with basic troubleshooting on their devices as a customer service representative</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HOBBIES AND INTERESTS -->
+    <section id="hobbies" style="background-image: url('/hobbies.png');">
+        <h4 class="hobbies-title">Hobbies & Interests</h4>
+        <div class="hobbies-container2">
+            <div class="hobbies-box2">
+                <div class="hobbies-text2">
+                    <img src="/watch.png" alt="Hobby 1">
+                    <p>Watching movies and series</p>
+                </div>
+            </div>
+            <div class="hobbies-box2">
+                <img src="/read.png" alt="Hobby 2">
+                <div class="hobbies-text2">
+                    <p>Reading mangas and Novels</p>
+                </div>
+            </div>
+            <div class="hobbies-box2">
+                <img src="/clean.png" alt="Hobby 3">
+                <div class="hobbies-text2">
+                    <p>Cleaning and organizing stuff and room</p>
+                </div>
+            </div>
+            <div class="hobbies-box2">
+                <img src="/collect.png" alt="Hobby 4">
+                <div class="hobbies-text2">
+                    <p>Collect anime merch</p>
+                </div>
+            </div>
+            <div class="hobbies-box2">
+                <img src="/karaoke.png" alt="Hobby 5">
+                <div class="hobbies-text2">
+                    <p>Karaoke session in free time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- GOALS Section -->
+    <section id="goals" style="background-image: url('/goals.png');">
+        <h4 class="goals-title">Goals & Dreams</h4>
+        <div class="goals-container2">
+            <div class="goals-box2">
+                <div class="goals-text2">
+                    <p>My ultimate goal is to graduate from this course by 2027, ideally with Latin honors, despite my unconventional journey</p>
+                </div>
+            </div>
+            <div class="goals-box2">
+                <div class="goals-text2">
+                    <p>To secure a well-paying job with a healthy working environment. I aim to leverage my skills to make meaningful contributions in the IT field, financially support my family, and repay those who have helped me</p>
+                </div>
+            </div>
+            <div class="goals-box2">
+                <div class="goals-text2">
+                    <p>Committed to continuous learning, collaborating with people worldwide, and developing solutions to modern problems to grow my IT career</p>
+                </div>
+            </div>
+            <div class="goals-box2">
+                <div class="goals-text2">
+                    <p>Aspire to aid the less fortunate, honor my parents' sacrifices, and eventually gain recognition for my achievements</p>
+                </div>
+            </div>
+            <div class="goals-box2">
+                <div class="goals-text2">
+                    <p>A decent, comfortable life where I have everything I need</p>
+                </div>
+            </div>
+            <div class="goals-box2">
+                <div class="goals-text2">
+                    <p>I dream of traveling to anime landmarks and attending concerts of my favorite K-pop group, 2NE1, and artists like Bruno Mars</p>
+                </div>
+            </div>
+            <div class="goals-box2">
+                <div class="goals-text2">
+                    <p>I also dream of traveling the world with my family and loved ones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    
+
+
+
+
+      <!-- EDUCATION -->
+      <section id="education" style="background-image: url('/path/to/education.jpg');">
+        <div class="content">
+          <h1>Education</h1>
+          <p>I have completed my studies in Computer Science, specializing in web development and design.</p>
+        </div>
       </section>
-  
-      <section id="experience" class="section">
-        <h2>IT Experience</h2>
-        <ul>
-          <li>🚀 Designed the user interface for a mobile application project using Android Studio</li>
-          <li>🎨 Created captivating interfaces and delightful user experiences for websites and mobile apps in a UI/UX Design and Programming course</li>
-          <li>💻 Developed a detailed ERD in MySQL for a local shoe restoration business</li>
-          <li>🛠️ Gained hands-on experience coding in Python and Java during the first year</li>
-          <li>📞 Assisted customers with basic troubleshooting on their devices as a customer service representative</li>
-        </ul>
+
+      <section id="gallery" style="background-image: url('/path/to/gallery.jpg');">
+        <div class="content">
+          <h1>Gallery</h1>
+          <p>Check out some of my favorite moments captured in these photos.</p>
+        </div>
       </section>
-  
-      <section id="hobbies" class="section">
-        <h2>Hobbies & Interests</h2>
-        <ul>
-          <li>🎬 Diving into the world of entertainment with English movies, TV shows, Korean and Chinese dramas, and anime movies and series</li>
-          <li>📚 Getting lost in the pages of manga and novels, with a special fondness for Paulo Coelho's masterpieces like The Alchemist</li>
-          <li>🎤 Singing my heart out during karaoke sessions in my free time</li>
-          <li>📺 Absorbing knowledge from documentaries about history, murder, and real-life crime stories</li>
-          <li>🌟 Being captivated by people’s life stories, achievements, and experiences</li>
-          <li>🧹 Finding joy in cleaning and organizing my stuff and room</li>
-        </ul>
-      </section>
-  
-      <section id="goals" class="section">
-        <h2>Goals & Dreams</h2>
-        <ul>
-          <li>🎓 My ultimate goal is to graduate from this course by 2027, ideally with Latin honors, despite my unconventional journey.</li>
-          <li>🌟 I aspire to secure a well-paying job with a healthy working environment. I aim to leverage my skills to make meaningful contributions in the IT field, financially support my family, and repay those who have helped me.</li>
-          <li>📚 I am committed to continuous learning, collaborating with people worldwide, and developing solutions to modern problems to grow my IT career.</li>
-          <li>🤝 I aspire to aid the less fortunate, honor my parents' sacrifices, and eventually gain recognition for my achievements.</li>
-          <li>🏡 I don’t seek luxury, but a decent, comfortable life where I have everything I need.</li>
-          <li>🌍 As an avid anime fan, I dream of traveling to anime landmarks and attending concerts of my favorite K-pop group, 2NE1, and artists like Bruno Mars.</li>
-          <li>✈️ I also dream of traveling the world with my family and loved ones. These ambitions drive my dedication to study and strive for success.</li>
-        </ul>
-      </section>
-  
-      <section id="gallery" class="section">
-        <h2>Photo Gallery</h2>
-        <div class="gallery-container">
-          <div class="gallery">
-            <img src="https://scontent.fmnl25-3.fna.fbcdn.net/v/t1.15752-9/464678236_1621760615140348_8138346788410055524_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEXzV8t0A7Bx352Q1FITH_wEbVjyoip8TQRtWPKiKnxNFAM8ANCPDHfhup7mPbFZFBJ_dD-o_Grfrvnjxpb6gRq&_nc_ohc=EHrbpeFFF6cQ7kNvgENcVb6&_nc_zt=23&_nc_ht=scontent.fmnl25-3.fna&oh=03_Q7cD1gE2qwi03TDiZtCBf0slz2LWMQ5NBmgAd5sY3gi__2q7mg&oe=67B99446" alt="Photo 1">
-          </div>
-          <div class="gallery">
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462566935_919390329697512_8093583739306387370_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeG_8gBmNy9X-VW6WAIEMpLrJbe42oQbDuclt7jahBsO5_jwvhjzdnLHrGOSignT879PtMHT2sJdrjEyfY03lRZ_&_nc_ohc=b13tbEZbz2cQ7kNvgEaf8LM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHgKuKNvWJArdYgoFTPa1AMp6jGJpLKNyUAsLyV53Pdcg&oe=67B98FB2" alt="Photo 2">
-          </div>
-          <div class="gallery">
-            <img src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.15752-9/474061739_618804800598767_4472319851737307244_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHaf01KqJ98HKJvRQ6_SDKOx61LCjXMAybHrUsKNcwDJuH0vcIeaYREB1z__KFjSpVZNflkTofLZeCFxTWiQtO0&_nc_ohc=6Npz-I_WugkQ7kNvgHuUfze&_nc_zt=23&_nc_ht=scontent.fmnl25-5.fna&oh=03_Q7cD1gFr77vhPpW_8_EFDTk7jmSJwJ7Wzto2Qpcd-X5qs9Op3Q&oe=67B99E30" alt="Photo 3">
-          </div>
-          <div class="gallery">
-            <img src="https://scontent.fmnl25-4.fna.fbcdn.net/v/t1.15752-9/473265681_1151572549823226_6387959509668531187_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGRjZdUNBvXZmX-3FIbCIWwrDgmEjv4PX2sOCYSO_g9fXkX39jSYdwgKD6U9FmR6N8JuhVkEdOBtjJRKxBsejaP&_nc_ohc=Kuje_LIluv0Q7kNvgHG8QO4&_nc_zt=23&_nc_ht=scontent.fmnl25-4.fna&oh=03_Q7cD1gGJGtP2WWCLT-DRP1EoiKYngAZaEVUkyS5wDmWOje0opw&oe=67B9A15B" alt="Photo 4">
-          </div>
-          <div class="gallery">
-            <img src="https://scontent.fmnl25-1.fna.fbcdn.net/v/t1.15752-9/473736550_607422458543163_4456432528710873462_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeG42xdu1-UfnqqDqLiMwoENn7YdP0e-zh6fth0_R77OHhH2fOVYoTcbonP8MCWIQ31Pc-J8O56gPgte-H6Q4LmU&_nc_ohc=qj7kUAgAOssQ7kNvgEJIvGR&_nc_zt=23&_nc_ht=scontent.fmnl25-1.fna&oh=03_Q7cD1gE0glKXBcqOw9qLkVdPVGAUvXy7wRJn82JLUobn2dEe9w&oe=67B9995A" alt="Photo 5">
-          </div>
+
+      <section id="contact" style="background-image: url('/path/to/contact.jpg');">
+        <div class="content">
+          <h1>Contact Me</h1>
+          <p>Feel free to reach out to me for any inquiries or collaborations.</p>
         </div>
       </section>
     </main>
-  
-    <footer>
-      <p>© 2025 Tracie Cañas Tomon. All rights reserved.</p>
-    </footer>
+  </div>
 </template>
-  
+
+
+
+
+
+
+
+
+
+
+
 <script>
+export default {
+  name: "ResponsivePage",
+  data() {
+    return {
+      menuOpen: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+    },
+    closeMenu() {
+      this.menuOpen = false;
+    }
+  }
+};
 </script>
-  
-<style>
-  body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1F305E;
-    color: #000000;
-    line-height: 1.6;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #ADD8E6;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #ffffff;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-  }
-  
-  h1, h2, h3 {
-    margin-top: 0;
-  }
-  
-  header {
-    padding: 10px;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.8);
-    text-align: left;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    text-align: left;
-  }
-  
-  .navbar li {
-    list-style: none;
-  }
-  
-  .navbar a {
-    font-size: 16px;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    position: relative;
-}
-  .navbar a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 0;
-    background: white;
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: width 0.3s ease-in-out;
-}
-  .navbar a:hover::after {
-    width: 100%;
-}
-  
-  .section {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgb(255 255 255 / 80%); 
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-  }
-  
-  .section h1, .section h2 {
-    text-align: center;
-    color: #db841c;
-  }
 
-  .section h3 {
-    text-align: center;
-    color: #1F305E;
-  } 
-
-  .section h4 {
-    text-align: center;
-    color: #D27D2D;
-  }
-
-  .section p {
-    text-align: center;
-  }
-
-/* HOME */
-#home {
-   color: white;
-}
-    
-.home {  
-    text-align: center;
-    padding: 80px 20px;
-    background-image: url('/public/home-bg.png') no-repeat center center/cover;
-    background-attachment: fixed;
-}
-
-.home-title h1 {
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    font-size: 68px;
-    max-width: 1000px;
-    font-weight: bold;
-    line-height: 1.3;
-    text-transform: uppercase;
-    margin-bottom: 70px;
-    margin-top: auto;
-    text-align: left;
-}
-
-
-  
-  footer {
-    text-align: center;
-    padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    color: #000000;
-    background-color: rgb(255 255 255 / 80%);
-  }
-
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.gallery {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-  
-</style>

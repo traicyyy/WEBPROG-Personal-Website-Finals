@@ -1,7 +1,7 @@
 <template>
   <personal-profile/> <br>
   <guest-book/>
-  <footer/>
+  <app-footer/>
 </template>
 
 <script></script>
